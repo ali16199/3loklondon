@@ -1,0 +1,26 @@
+<%-include('parts/header.ejs') %>
+<%-include('parts/navbar') %>
+<div class="container">
+    <div class="row">
+          <% for (let player of players) {%>
+             <div class="col col-12 col-md-6 col-lg-4 col-xl-3"> 
+                  <div class="card" style="width: 18rem;">
+                        <img src="<%= player.image%>" class="card-img-top" >
+                        <div class="card-body">
+                          <h5 class="card-title"><%=player.name%></h5>
+                          <p class="card-text"> position : <%=player.position%>
+                                                <br>
+                                                Number : <%=player.number%>
+                                                <br>
+                                               Age : <%=player.age%>
+                        
+                         </p>
+                        </div>
+                      </div>   
+             
+             </div>   
+         <%}%> 
+    
+       </div> 
+      </div>
+       <%-include('parts/footer') %>
